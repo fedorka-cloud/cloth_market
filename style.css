@@ -1,0 +1,121 @@
+
+
+.section {
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1920px;
+    font-family: "RF Dewi Extended";
+}
+
+.header {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #121214;
+
+    @media (max-width: 361px) {
+        height: 80px;
+    }
+}
+
+.header_menu {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+
+    @media (max-width: 1150px) {
+        display: none;
+    }
+}
+
+.header_mobile_container {
+    @media (min-width: 568px) {
+        display: none;
+    }
+    @media (max-width: 568px) {
+        display: flex;
+        align-items: center;
+        gap: 36px;
+    }
+}
+
+.header_menu_text {
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.header_logotips {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    @media (max-width: 361px) {
+        gap: 22px;
+    }
+}
+
+.website_logo_container {
+    display: flex;
+    align-items: center;
+    gap: 54px;
+}
+
+.burger_logo {
+    @media (min-width: 768px) {
+        display: none;
+    }
+    @media (max-width: 568px) {
+        display: none;
+    }
+}
+
+.price_container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.price_text {
+    color: #8C8F96;
+    text-align: center;
+    font-family: "Cera Pro";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 10px;
+
+    @media (max-width: 568px) {
+        display: none;
+    }
+}
+
+.search_logo {
+    @media (max-width: 568px) {
+        display: none;
+    }
+}
+
+.shop_logo {
+    @media (max-width: 568px) {
+        position: relative;
+    }
+}
+
+.new_logo {
+    @media (max-width: 568px) {
+        position: absolute;
+        top: 8%;
+        right: 9%;
+        width: 14px;
+        height: 14px;
+    }
+}
