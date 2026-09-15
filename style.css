@@ -1,3 +1,9 @@
+.special-gothic-expanded-one-regular {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 h1 {
     margin: 0;
 }
@@ -14,7 +20,6 @@ p {
     display: flex;
     flex-direction: column;
     max-width: 1920px;
-    font-family: "RF Dewi Extended";
 }
 
 .header {
@@ -27,6 +32,9 @@ p {
 
     @media (max-width: 361px) {
         height: 80px;
+    }
+    @media (max-width: 568px) {
+        gap: 25px;
     }
 }
 
@@ -98,7 +106,6 @@ p {
 .price_text {
     color: #8C8F96;
     text-align: center;
-    font-family: "Cera Pro";
     font-size: 13px;
     font-style: normal;
     font-weight: 700;
@@ -131,36 +138,110 @@ p {
 
 .hero_block {
     display: flex;
-    flex-direction: column;
     max-width: 1541px;
     height: 631px;
     background-image: url("./img/hero_background.png");
     border-radius: 7px;
     margin: 0 auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (max-width: 768px) {
+        height: 451px;
+    }
+    @media (max-width: 568px) {
+        background-image: url("./img/hero_background_mobile.png");
+        height: auto;
+        padding: 10% 0 5%;
+    }
 }
 
 .hero_content {
     display: flex;
+    flex-direction: column;
+    gap: 63px;
     padding: 98px 0 0 90px;
+
+    @media (max-width: 768px) {
+        gap: 19px;
+        padding: 59px 0 0 67px;
+    }
+    @media (max-width: 568px) {
+        gap: 24px;
+        padding: 43px 0 0 17px;
+    }
 }
 
 .hero_title {
     color: #171819;
-    font-family: "RF Dewi Expanded";
     font-size: 51px;
     font-style: normal;
     font-weight: 900;
     line-height: 63px;
     text-transform: uppercase;
+
+    @media (max-width: 768px) {
+        font-size: 34px;
+        line-height: 43px;
+    }
 }
 
 .hero_text {
     color: #121214;
-    font-family: "RF Dewi Extended";
     font-size: 19px;
     font-style: normal;
     font-weight: 400;
     line-height: 32px;
+
+    @media (max-width: 768px) {
+        font-size: 17px;
+    }
+    @media (max-width: 568px) {
+        line-height: 27px;
+    }
+}
+
+.hero_text_on_tablet {
+    @media (max-width: 768px) {
+        display: flex;
+    }
+    @media (min-width: 768px) {
+        display: flex;
+    }
+    @media (max-width: 568px) {
+        display: none;
+    }
+}
+
+.hero_text_off_tablet {
+    @media (min-width: 768px) {
+        display: none;
+    }
+    @media (max-width: 768px) {
+        display: none;
+    }
+    @media (max-width: 568px) {
+        display: none;
+    }
+}
+
+.hero_text_on_mobile {
+    @media (max-width: 768px) {
+        display: none;
+    }
+    @media (max-width: 568px) {
+        display: flex;
+    }
+}
+
+.hero_text_off_mobile {
+    @media (max-width: 768px) {
+        display: none;
+    }
+    @media (max-width: 568px) {
+        display: flex;
+    }
 }
 
 .hero_btn {
@@ -173,18 +254,25 @@ p {
     border-radius: 5px;
 
     color: #FFF;
-    font-family: "RF Dewi Expanded";
     font-size: 12px;
     font-style: normal;
     font-weight: 800;
     line-height: 17px;
     text-transform: uppercase;
+
+    @media (max-width: 568px) {
+        width: 204px;
+    }
 }
 
 .hero_text_container {
     display: flex;
     flex-direction: column;
     gap: 19px;
+
+    @media (max-width: 568px) {
+        gap: 9px;
+    }
 }
 
 .hero_arrows {
@@ -195,4 +283,9 @@ p {
 .arrow {
     width: 67px;
     height: 67px;
+
+    @media (max-width: 768px) {
+        width: 54px;
+        height: 54px;
+    }
 }
