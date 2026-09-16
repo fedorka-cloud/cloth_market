@@ -219,6 +219,7 @@ p {
 
     @media (max-width: 768px) {
         font-size: 17px;
+        line-height: 27px;
     }
     @media (max-width: 568px) {
         line-height: 27px;
@@ -351,6 +352,7 @@ p {
 
     @media (max-width: 680px) {
         max-width: 550px;
+        height: auto;
         margin: 0 auto;
         justify-content: space-between;
     }
@@ -465,6 +467,17 @@ p {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    @media (max-width: 1250px) {
+        max-width: 728px;
+        height: 535px;
+    }
+    @media (max-width: 768px) {
+        max-width: 500px;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .calculator_content {
@@ -480,6 +493,12 @@ p {
     @media (max-width: 1250px) {
         margin: 36px 0 0 70px;
     }
+    @media (max-width: 768px) {
+        align-items: center;
+        justify-content: center;
+        margin: initial;
+        padding: 36px 0 33px 0;
+    }
 }
 
 .calc_title {
@@ -494,10 +513,15 @@ p {
         font-size: 34px;
         line-height: 43px;
     }
+    @media (max-width: 768px) {
+        font-size: 23px;
+        line-height: 32px;
+    }
 }
 
 .calc_text {
     color: #FFF;
+    max-width: 800px;
     font-size: 19px;
     font-style: normal;
     font-weight: 700;
@@ -506,6 +530,13 @@ p {
     @media (max-width: 1250px) {
         font-size: 15px;
         line-height: 27px;
+        max-width: 440px;
+        width: 100%;
+    }
+    @media (max-width: 768px) {
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
     }
 }
 
@@ -513,6 +544,12 @@ p {
     display: flex;
     flex-direction: column;
     gap: 19px;
+
+    @media (max-width: 768px) {
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
 }
 
 .calc_block {
@@ -523,14 +560,26 @@ p {
     @media (max-width: 1250px) {
         gap: 49px;
     }
+
+    @media (max-width: 768px) {
+        align-items: center;
+        justify-content: center;
+        gap: 22px;
+    }
 }
 
 .calc_steps {
     display: flex;
     gap: 58px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 23px;
+    }
 }
 
 .step_text {
+    max-width: 258px;
     color: #FFF;
     font-size: 16px;
     font-style: normal;
@@ -538,6 +587,7 @@ p {
     line-height: 22px;
 
     @media (max-width: 1250px) {
+        max-width: 202px;
         font-size: 14px;
         line-height: 21px;
     }
@@ -563,23 +613,39 @@ p {
 }
 
 .step {
+    width: 355px;
+    height: 77px;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 13%;
+
+    @media (max-width: 1250px) {
+        width: 260px;
+    }
 }
 
 .step_img_container {
+    position: relative;
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 .step_img {
-
+    position: absolute;
 }
 
 .calc_button {
-    max-width: 233px;
+    display: flex;
+
+    @media (max-width: 1350px) {
+        justify-content: center;
+    }
+}
+
+.calc_button_text_container {
+    max-width: 274px;
+    width: 100%;
     display: flex;
     border-radius: 5px;
     background: #121214;
@@ -602,6 +668,13 @@ p {
     @media (max-width: 1350px) {
         display: none;
     }
+
+}
+
+.calc_mobile_on {
+    @media (min-width: 1250px) {
+        display: none;
+    }
 }
 
 .calc_button_img {
@@ -621,5 +694,14 @@ p {
         position: relative;
         height: 117%;
         top: -4%;
+    }
+
+    @media (max-width: 1250px) {
+        height: 80%;
+        top: -13%;
+        left: -60%;
+    }
+    @media (max-width: 768px) {
+        display: none;
     }
 }
