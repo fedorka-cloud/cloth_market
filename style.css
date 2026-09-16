@@ -339,6 +339,7 @@ p {
 .cloth_catalog_container {
     display: flex;
     flex-direction: column;
+    position: relative;
     max-width: 1362px;
     height: 521px;
 
@@ -456,7 +457,6 @@ p {
 
 .calculator_section {
     display: flex;
-    flex-direction: column;
     max-width: 1541px;
     height: 631px;
     background-image: url("./img/calc_background.png");
@@ -467,12 +467,19 @@ p {
     background-repeat: no-repeat;
 }
 
+.calculator_content {
+    display: flex;
+}
 
 .calc_container {
     display: flex;
     flex-direction: column;
     gap: 41px;
     margin: 98px 0  0 90px;
+
+    @media (max-width: 1250px) {
+        margin: 36px 0 0 70px;
+    }
 }
 
 .calc_title {
@@ -482,6 +489,11 @@ p {
     font-weight: 900;
     line-height: 63px;
     text-transform: uppercase;
+
+    @media (max-width: 1250px) {
+        font-size: 34px;
+        line-height: 43px;
+    }
 }
 
 .calc_text {
@@ -490,6 +502,11 @@ p {
     font-style: normal;
     font-weight: 700;
     line-height: 32px;
+
+    @media (max-width: 1250px) {
+        font-size: 15px;
+        line-height: 27px;
+    }
 }
 
 .calc_text_container {
@@ -502,6 +519,10 @@ p {
     display: flex;
     flex-direction: column;
     gap: 24px;
+
+    @media (max-width: 1250px) {
+        gap: 49px;
+    }
 }
 
 .calc_steps {
@@ -515,28 +536,46 @@ p {
     font-style: normal;
     font-weight: 600;
     line-height: 22px;
+
+    @media (max-width: 1250px) {
+        font-size: 14px;
+        line-height: 21px;
+    }
 }
 
 .step_nub {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
     line-height: 32px;
 
-    color: #FFF;
-    width: 77px;
-    height: 77px;
-    border: 1px solid #FFFFFF75;
-    border-radius: 50%;
+    color: #FFFFFF;
+
+    @media (max-width: 1250px) {
+        /*padding: 18px 26px 19px 27px;*/
+        font-size: 24px;
+        line-height: 14px;
+    }
 }
 
 .step {
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+.step_img_container {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.step_img {
+
 }
 
 .calc_button {
@@ -559,7 +598,28 @@ p {
     text-transform: uppercase;
 }
 
+.display_off {
+    @media (max-width: 1350px) {
+        display: none;
+    }
+}
+
 .calc_button_img {
     width: 7.6px;
     height: 9.6px;
+}
+
+.calculator_right_content{
+    position: relative;
+}
+
+.phone_img {
+    position: absolute;
+    top: -20%;
+
+    @media (max-width: 1500px) {
+        position: relative;
+        height: 117%;
+        top: -4%;
+    }
 }
