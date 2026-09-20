@@ -634,6 +634,8 @@ p {
 }
 
 .step_first_text {
+    display: flex;
+    flex-wrap: nowrap;
     max-width: 258px;
     color: #FFF;
     font-size: 16px;
@@ -747,11 +749,17 @@ p {
     @media (max-width: 1250px) {
         display: none;
     }
+    @media (min-width: 1250px) {
+        display: flex;
+    }
 }
 
 .calc_mobile_off {
     @media (max-width: 1250px) {
         display: flex;
+    }
+    @media (min-width: 1250px) {
+        display: none;
     }
 }
 
@@ -776,8 +784,8 @@ p {
 
     @media (max-width: 1250px) {
         height: 80%;
-        top: -13%;
-        left: -60%;
+        top: -11%;
+        left: -80%;
     }
     @media (max-width: 768px) {
         display: none;
