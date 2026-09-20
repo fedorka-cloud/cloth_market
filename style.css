@@ -657,7 +657,7 @@ p {
     line-height: 22px;
 
     @media (max-width: 1250px) {
-        max-width: 221px;
+        max-width: 202px;
         font-size: 14px;
         line-height: 21px;
     }
