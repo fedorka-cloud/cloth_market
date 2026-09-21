@@ -33,11 +33,16 @@ p {
     margin: 0 auto;
 }
 
+body {
+    margin: 0;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
     max-width: 1920px;
     font-family: RF Dewi Expanded, sans-serif;
+    margin: 0 auto;
 }
 
 .header {
@@ -259,10 +264,10 @@ p {
 
 .hero_text_on_tablet {
 
-    @media (max-width: 768px) {
+    @media (max-width: 769px) {
         display: flex;
     }
-    @media (min-width: 768px) {
+    @media (min-width: 769px) {
         display: none;
     }
     @media (max-width: 568px) {
@@ -286,7 +291,7 @@ p {
     @media (min-width: 768px) {
         display: none;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 769px) {
         display: none;
     }
     @media (max-width: 568px) {
@@ -308,13 +313,19 @@ p {
 
 .hero_btn {
     display: flex;
-    padding: 23px 19px;
     width: 251px;
+    height: 66px;
     justify-content: center;
     align-items: center;
     background-color: #121214;
     border-radius: 5px;
     gap: 23px;
+    cursor: pointer;
+    transition: 0.2s ease;
+
+    @media (min-width: 568px) {
+        width: 231px;
+    }
 
     @media (max-width: 568px) {
         width: 204px;
@@ -322,8 +333,11 @@ p {
     }
 }
 
-.hero_btn_text {
+.hero_btn:hover {
+    scale: 0.95;
+}
 
+.hero_btn_text {
     color: #FFF;
     font-size: 12px;
     font-style: normal;
@@ -631,6 +645,10 @@ p {
         flex-direction: column;
         gap: 23px;
     }
+
+    @media (max-width: 1250px) {
+        gap: 20px;
+    }
 }
 
 .step_first_text {
@@ -644,7 +662,6 @@ p {
     line-height: 22px;
 
     @media (max-width: 1250px) {
-        max-width: 221px;
         font-size: 14px;
         line-height: 21px;
     }
@@ -692,7 +709,7 @@ p {
     gap: 16px;
 
     @media (max-width: 1250px) {
-        width: 260px;
+        width: 281px;
     }
 }
 
@@ -718,10 +735,13 @@ p {
     height: 66px;
     display: flex;
     border-radius: 5px;
-    background: #121214;
+    background-color: #121214;
     justify-content: center;
     align-items: center;
     gap: 23px;
+    color: #FFF;
+    cursor: pointer;
+    transition: 0.2s ease;
 
     @media (max-width: 568px) {
         width: 229px;
@@ -729,8 +749,11 @@ p {
     }
 }
 
+.calc_button_text_container:hover {
+    scale: 0.95;
+}
+
 .calc_button_text {
-    color: #FFF;
     font-size: 12px;
     font-style: normal;
     font-weight: 800;
