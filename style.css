@@ -1,3 +1,34 @@
+.hover-underline {
+    font-size: 2rem;
+    color: #ffffff;
+    position: relative;
+    display: inline-block;
+}
+
+.hover-underline::after,
+.hover-underline::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #ff0000, #00ffff);
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-out;
+}
+
+.hover-underline::before {
+    top: -5px;
+    transform-origin: left;
+}
+
+.hover-underline:hover::after,
+.hover-underline:hover::before {
+    transform: scaleX(1);
+}
+
 @font-face {
     font-family: 'RF Dewi Expanded';
     src: local("RF Dewi Expanded Bold");
@@ -528,7 +559,6 @@ body {
 
 .calculator_section {
     position: absolute;
-    left: 10%;
     top: -37%;
     display: flex;
     max-width: 1541px;
@@ -552,6 +582,8 @@ body {
 
 .calculator_content {
     display: flex;
+    max-width: 1541px;
+    width: 100%;
 }
 
 .calc_container {
@@ -805,12 +837,12 @@ body {
 
     @media (max-width: 1500px) {
         position: relative;
-        height: 117%;
+        height: 60%;
         top: -4%;
     }
 
     @media (max-width: 1250px) {
-        height: 80%;
+        height: 75%;
         top: -11%;
         left: -80%;
     }
@@ -822,6 +854,7 @@ body {
 .about {
     position: relative;
     display: flex;
+    justify-content: center;
     max-width: 1920px;
     width: 100%;
     height: 603px;
