@@ -74,3 +74,40 @@
 //      }
 //     console.log(i);
 // } -- задание 5
+
+// let sum = 0
+//
+// for (i = 1; i < 101; i++) {
+//     sum += i
+// }
+// console.log(sum) -- задание 6
+
+// const table = +prompt('введите число:')
+//
+// for (let i = 1; i <= 10; i++) {
+//     table * i
+//     console.log(`${table} × ${i} = ${table * i}`);
+// } -- задание 7
+
+// let result = 0
+// let num = 1
+//
+// while (num !== 0 ) {
+//     num = +prompt('Введите число:')
+//     result += num
+// }
+// console.log(`Ваше число:${result}`) -- задание 8
+
+// const secretNumber = prompt('введите число')
+//
+// while (secretNumber !== 0) {
+//     if (secretNumber > 7) {
+//         console.log("Загаданное число меньше")
+//     } else if (secretNumber < 7) {
+//         console.log("Загаданное число больше")
+//     } else {
+//         console.log("Поздравляем! Вы угадали!")
+//     }
+//     break
+// } -- последнее задание
+
